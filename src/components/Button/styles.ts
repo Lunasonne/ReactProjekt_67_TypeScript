@@ -1,7 +1,7 @@
  import styled from "@emotion/styled";
 
-interface ButtonComponentProps {
-  $isRed: boolean;
+interface ButtonComponentProps { // isRed КАСТОМНЫЙ АТРИБУТ. такого не существует, поэтому пишем интерфейс и ставим знак доллара
+ $isRed: boolean;
 }
 
 const generateButtonColor = (isRed: boolean, disabled: boolean | undefined) => {
@@ -40,17 +40,14 @@ export const ButtonComponent = styled.button<ButtonComponentProps>`
   padding: 0;
   height: 70px;
   width: 100%;
-  /* background-color: ${({ $isRed }) =>
-    $isRed ? "#ff6868ff" : "rgb(82, 82, 241)"}; */
-  background-color: ${({ $isRed, disabled }) =>
-    generateButtonColor($isRed, disabled)};
+  /* background-color: ${({ $isRed }) =>    $isRed ? "#ff6868ff" : "rgb(82, 82, 241)"}; */
+  background-color: ${({ $isRed, disabled }) => generateButtonColor($isRed, disabled)};
   color: white;
   font-size: 20px;
   font-weight: bold;
-  cursor: pointer;
+  cursor: ${({disabled}) => disabled ? "not-allowed" : "pointer"}; 
 
   &:hover {
-    background-color: ${({ $isRed, disabled }) =>
-      generateButtonColorOnHover($isRed, disabled)};
+    background-color: ${({ $isRed, disabled }) => generateButtonColorOnHover($isRed, disabled)};
   }
 `;
