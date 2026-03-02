@@ -1,6 +1,6 @@
  
 import { useState, type ChangeEvent } from "react";
- import { v4 as uuidv4 } from "uuid";
+ import { v4 } from "uuid";
  import Input from "components/Input/Input";
 import Button from "components/Button/Button";
 import type { Note } from "./types";
@@ -10,17 +10,17 @@ export default function Homework_09() {
   const [notes, setNotes] = useState<Note[]>([]);
   const [newNote, setNewNote] = useState<string>("");
     
-  // Обновление input
+   
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setNewNote(event.target.value);
   };
 
-  // Добавление новой заметки
+  
   const addNote = () => {
     if (!newNote.trim()) return;
 
     const note: Note = {
-      id: uuidv4(),
+      id: v4(),
       text: newNote.trim(),
       createdAt: new Date(),
     };
@@ -32,7 +32,7 @@ export default function Homework_09() {
   
   const noteItems = notes.map((note) => (
     <TaskItem key={note.id}>
-      {note.text}
+      { note.createdAt.toLocaleString() + " " + note.text }
     </TaskItem>
   ));
 
