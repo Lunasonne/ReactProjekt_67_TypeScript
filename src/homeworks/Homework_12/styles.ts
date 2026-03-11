@@ -1,0 +1,1 @@
+import GlobalStyles from "styles/GlobalStyles";
