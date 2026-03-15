@@ -115,7 +115,7 @@ function Lesson_07() {
       <Input
         id="simple-input"
         name="simpleInput"
-        placeholder="Eneter something"
+        placeholder="Enter something"
         label="Simple Input"
       />
       <Counter count={count} onMinus={onMinus} onPlus={onPlus} />
