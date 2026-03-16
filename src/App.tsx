@@ -5,6 +5,7 @@ import Home from "pages/EmployeeApp/Home/Home";
 import About from "pages/EmployeeApp/About/About";
 import LogIn from "pages/EmployeeApp/LogIn/LogIn";
 import ContactUs from "pages/EmployeeApp/ContactUs/ContactUs";
+import Clients from "pages/Clients/Clients";
 
 import Lesson_06 from "./lessons/Lesson_06/Lesson_06";
 import Lesson_07 from "./lessons/Lesson_07/Lesson_07";
@@ -17,20 +18,29 @@ import Lesson_12 from "./lessons/Lesson_12/Lesson_12";
 import Homework_06 from "./homeworks/Homework_06/Homework_06";
 import Homework_07 from "./homeworks/Homework_07/Homework_07";
 import Homework_08 from "./homeworks/Homework_08/Homework_08";
+import Ecosia from "pages/Ecosia/Ecosia";
+import NationalGeographic from "pages/NationalGeographic/NationalGeographic";
+import GroveCollaborative from "pages/GroveCollaborative/GroveCollaborative";
 
  
-function App() {    // BrowserRouter хранит state с актуальным путем и подписан на изменения URL, он слушает события и когда URL меняется он предоставляет его дочерним Routes
-                    // потом Routes получает новый location, так как он подписан на BrowserRouter, сравнивает path и решает, какой Route показывать и выбирает элемент  
+function App() {    
     return (
        <BrowserRouter>                
     <GlobalStyles/>   
     <Layout> 
         <Routes >
-            <Route path= "/"  element={<Home/>} />   {/* "/" корневой URL сайта (root path). */}
+            <Route path= "/"  element={<Home/>} />  
             <Route path = "/about" element={<About />}/> 
             <Route path = "/login" element ={<LogIn/>}/>
             <Route path = "/contactUs" element ={<ContactUs/>}/>
-            <Route path = "*" element ={"Page Not Found"}/>
+            <Route path = "/clients" element ={<Clients/>}/>
+
+            <Route path="/clients" element={<Clients />} />
+            <Route path="/clients/grove-collaborative" element={<GroveCollaborative/>} />
+            <Route path="/clients/ecosia" element={<Ecosia/>} />
+            <Route path="/clients/nationalgeographic" element={<NationalGeographic />} />
+
+             <Route path = "*" element ={"Page Not Found"}/>
         </Routes>
     </Layout>
                     {/* <Homework_08/>  */}

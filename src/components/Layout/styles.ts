@@ -83,7 +83,6 @@ export const FooterLink = styled(Link)`
   textDecoration: isActive ? "underline" : "none",
 }); 
 // NavLink — это расширенная версия Link. Он дает isActive из библиотеки React Router.
-// NavLink проверяет, совпадает ли текущий URL с to. Если совпадает → ссылка активная.
+// NavLink проверяет, совпадает ли текущий URL с to. Если совпадает - ссылка активная.
 // Эта информация передаётся в функцию style или className через объект: { isActive: boolean}
 //  NavLink внутри использует Link, просто добавляет логику проверки isActive.
-// Link → просто ссылка, NavLink → ссылка + определяет активную страницу

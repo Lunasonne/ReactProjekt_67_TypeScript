@@ -15,12 +15,11 @@ import {
 } from "./styles";
 import { type LayoutProps } from "./types";
 
-const navigate = useNavigate() // Хук useNavigate() из React Router нужен для программного перехода между страницами.
-                                // То есть переход происходит не по клику на ссылку, а из кода. Вв нашем случае по клику на картинку
-const goToHomePage = ()=>{navigate("/")};
 
 function Layout({ children }: LayoutProps) {
-
+ 
+ const navigate = useNavigate()  
+ const goToHomePage = ()=>{navigate("/")};
 
   return (
     <LayoutWrapper>
@@ -32,10 +31,11 @@ function Layout({ children }: LayoutProps) {
           />
         </Logo>
         <NavigationContainer>    
-          <HeaderLink style={getActiveStyles}  to = "/">Home </HeaderLink>
-          <HeaderLink style={getActiveStyles} to = "/сontactUs"> Contact Us </HeaderLink>
+          <HeaderLink style={getActiveStyles} to = "/">Home </HeaderLink>
+          <HeaderLink style={getActiveStyles} to = "/contactUs"> Contact Us </HeaderLink>
           <HeaderLink style={getActiveStyles} to = "/about"> About </HeaderLink>
           <HeaderLink style={getActiveStyles} to = "/login"> Login</HeaderLink>
+          <HeaderLink style={getActiveStyles} to= "/clients"> Clients</HeaderLink>
         </NavigationContainer>
       </Header>
 {/* HeaderLink = styled(NavLink) 
@@ -52,12 +52,13 @@ function Layout({ children }: LayoutProps) {
         </FooterLogo >
         <FooterNavigation>
            <FooterLink to = "/">Home </FooterLink>
-          < FooterLink to = "/ContactUs"> Contact Us </FooterLink>
+          < FooterLink to = "/contactUs"> Contact Us </FooterLink>
           <FooterLink to = "/about"> About </FooterLink>
           <FooterLink to = "/login"> Login</FooterLink>
+          <FooterLink to= "/clients"> Clients</FooterLink>
         </FooterNavigation>
       </Footer>
-    </LayoutWrapper>
+    </LayoutWrapper>  
   );
 }
 
