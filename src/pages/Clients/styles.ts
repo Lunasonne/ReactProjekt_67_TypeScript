@@ -38,7 +38,7 @@ export const CompanyCard = styled.div`
 
 export const CompanyLogo = styled.img`
   width: 100px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 `;
 
 export const CompanyName = styled.span`
@@ -47,5 +47,9 @@ export const CompanyName = styled.span`
       
    white-space: nowrap; 
   width: 100%;  
+`;
 
+export const EcosiaName = styled(CompanyName)`
+    display: block;  
+  margin-top:9px;
 `;

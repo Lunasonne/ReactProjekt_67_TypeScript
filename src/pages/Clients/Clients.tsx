@@ -1,4 +1,4 @@
-import {  ClientsWrapper, CompanyPage, CompaniesGrid,CompanyCard,CompanyLogo,CompanyName} from "./styles";
+import {  ClientsWrapper, CompanyPage, CompaniesGrid,CompanyCard,CompanyLogo,CompanyName, EcosiaName} from "./styles";
 import  {HeaderLink, getActiveStyles}  from "components/Layout/styles";
  
 
@@ -8,13 +8,12 @@ function Clients() {
 
  <CompaniesGrid>
         <CompanyCard>
-        
-          <HeaderLink style={getActiveStyles} to="/clients/ecosia">
+        <HeaderLink style={getActiveStyles} to="/clients/ecosia">
             <CompanyLogo
               src="ecossia.png"
               alt="Ecosia Logo"
             />
-            <CompanyName>Ecosia</CompanyName>
+            <EcosiaName>Ecosia</EcosiaName>
           </HeaderLink>
          
         </CompanyCard>
