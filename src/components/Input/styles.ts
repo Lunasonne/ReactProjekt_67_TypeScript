@@ -46,5 +46,7 @@ export const InputLabel = styled.label`
   color: #ff6868ff;
 `;
   
-
- 
+export const Asterisk = styled.span`
+  color: red;
+  margin-left: 4px;
+`;

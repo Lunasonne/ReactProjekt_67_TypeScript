@@ -51,5 +51,5 @@ export const CompanyName = styled.span`
 
 export const EcosiaName = styled(CompanyName)`
     display: block;  
-  margin-top:9px;
+  margin-top:8px;
 `;

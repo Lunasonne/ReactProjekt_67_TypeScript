@@ -1,5 +1,5 @@
 import Button from "components/Button/Button";
-import { PageWrapper, ButtonControl, InfoWrapper } from "./styles";
+import { PageWrapper, ButtonControl, InfoWrapper, CompanyLink } from "./styles";
 import { useGoBack } from "components/hooks/useGoBack";
 
 export default function Ecosia() {
@@ -17,7 +17,11 @@ export default function Ecosia() {
               profits go directly to tree planting. The company also publishes transparent financial reports showing how funds are spent.
 Search results are partly provided by Google and Bing, and Ecosia invests in forest restoration projects 
 worldwide. Its servers run on renewable energy, and the company aims to reduce CO₂ emissions while 
-supporting environmental initiatives. </InfoWrapper>  
+supporting environmental initiatives. 
+</InfoWrapper>  
+ <CompanyLink  href="https://www.ecosia.org/"  target="_blank" >
+  Ecosia website
+      </CompanyLink>
       <ButtonControl>
         <Button onClick={goBack} name="Go back" />
       </ButtonControl>

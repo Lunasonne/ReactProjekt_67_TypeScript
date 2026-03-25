@@ -4,10 +4,11 @@ export interface InputProps {
   id: string;
   name: string;
   type?: string;
-  placeholder: string;
+  placeholder?: string;
   label: string;
   error?: undefined | string;
   disabled?: boolean;
   value?: string;
+  isRequired?: boolean;
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }

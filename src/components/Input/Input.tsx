@@ -1,5 +1,5 @@
   import { type InputProps } from "./types";
-import { InputWrapper, InputLabel, InputComponent, ErrorMessage } from "./styles";
+import { InputWrapper, InputLabel, InputComponent, ErrorMessage, Asterisk } from "./styles";
 
 function Input({
   id,
@@ -10,11 +10,12 @@ function Input({
   disabled = false,
   error = undefined,
   value,
-  onChange
+  onChange,
+  isRequired
 }: InputProps) {
   return (
     <InputWrapper>
-      <InputLabel htmlFor={id}>{label}</InputLabel>
+      <InputLabel htmlFor={id}>{label}{isRequired && <Asterisk>*</Asterisk>}</InputLabel>
       <InputComponent
         id={id}
         name={name}

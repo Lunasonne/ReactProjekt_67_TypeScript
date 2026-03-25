@@ -23,6 +23,15 @@ function ContactUsForm() {
       .max(60, "Maximum Email field length should be 60"),
   });
 
+
+//   const formik = useFormik({
+//   initialValues,
+//   validationSchema,
+//   validateOnChange,
+//   onSubmit
+// }); это называется конфигурация формы- хук создает всю форму и возвращает обьект управления формой
+
+
   const formik = useFormik({
     // name у элементов формы должен совпадать с ключом обьекта initialValues
     initialValues: {

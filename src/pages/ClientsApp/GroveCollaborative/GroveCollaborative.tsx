@@ -1,6 +1,7 @@
 import Button from "components/Button/Button";
- import { PageWrapper, ButtonControl, InfoWrapper } from "./styles";
+ import { PageWrapper, ButtonControl, InfoWrapper, CompanyLink } from "./styles";
 import { useGoBack } from "components/hooks/useGoBack";
+
 
 
 export default function GroveCollaborative() {
@@ -16,6 +17,10 @@ export default function GroveCollaborative() {
          reforestation initiatives, and works to reduce its overall carbon footprint.
           The company also uses bamboo paper, a fast-growing resource that can be quickly replenished.
       </InfoWrapper>
+      <CompanyLink
+              href="https://www.grove.co/" target="_blank" >
+     Grove Collaborative website
+            </CompanyLink>
       <ButtonControl>
         <Button onClick={goBack} name="Go back" />
       </ButtonControl>

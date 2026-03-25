@@ -1,4 +1,4 @@
-import { PageWrapper, ButtonControl,  InfoWrapper  } from "./styles";
+import { PageWrapper, ButtonControl,  InfoWrapper, CompanyLink  } from "./styles";
 import Button from "components/Button/Button";
 import { useGoBack } from "components/hooks/useGoBack";
  
@@ -15,6 +15,10 @@ export default function NationalGeographic() {
         nature and travel. It produces documentary films, TV programs, and educational content.
         It supports scientific expeditions and research around the world.
      </InfoWrapper>
+<CompanyLink  href="https://www.nationalgeographic.com/"  target="_blank" >
+   National Geographiс website
+      </CompanyLink>
+
       <ButtonControl>
         <Button onClick={goBack} name="Go back" />
       </ButtonControl>
